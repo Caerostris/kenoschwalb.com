@@ -63,6 +63,7 @@ a.navitem {
 	font-family: BebasNeueRegular, impact;
 	font-weight: bold;
 	font-size: 20px;
+	color: white;
 }
 
 a.navitem:visited {
