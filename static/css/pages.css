@@ -26,9 +26,14 @@
 	z-index: 15;
 }
 
-#home .navlabel, .navlabel:hover, .route:target .navlabel {
+#home .navlabel, .route:target .navlabel {
 	/* Display blue bar next to nav entry in currently opened page */
 	border-right: 2px solid #30A9F1;
+}
+
+.navlabel:hover {
+	/* Display blue bar next to nav entry on hover */
+	border-right: 2px solid #30A9F1 !important;
 }
 
 .route:target ~ #home > div {
