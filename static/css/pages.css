@@ -1,7 +1,52 @@
 .route {
+	/* Position navigation items so they appear as if they were defined */
+	/* In the same DOM node */
 	width: 0;
 	height: calc(1em + 15px);
 }
+
+/* PAGE ROUTING CODE START */
+
+/**
+ * Skip this bit if you don't want a headache.
+ * This code uses the #hashlocation part of the URL and the CSS
+ * :target selector to hide/show pages.
+ * The #home page is activated by default, and will be deactived
+ * if any other page is activated.
+ **/
+#home > div, .route:target > div {
+	/* Display content of opened page, */
+	/* or home page if no page is selected */
+	opacity: 1;
+}
+
+#home > .page, .route:target > .page {
+	/* Ensure currently opened page is at z-top so that */
+	/* text can be selected */
+	z-index: 15;
+}
+
+#home .navlabel, .navlabel:hover, .route:target .navlabel {
+	/* Display blue bar next to nav entry in currently opened page */
+	border-right: 2px solid #30A9F1;
+}
+
+.route:target ~ #home > div {
+	/* Hide home page if any other page is open */
+	opacity: 0 !important;
+}
+
+.route:target ~ #home > .page {
+	/* Ensure home page is not at z-top if any other page is open */
+	z-index: 0;
+}
+
+.route:target ~ #home .navlabel {
+	/* Do not mark home as active in navigation if another page is open */
+	border-right-width: 0;
+}
+
+/* PAGE ROUTING CODE END */
 
 .page {
 	/* Positioning */
@@ -15,11 +60,6 @@
 	/* Style */
 	opacity: 0;
 	transition: opacity 0.2s linear;
-}
-
-.route:target > .page {
-	opacity: 1;
-	z-index: 15;
 }
 
 .widget {
@@ -51,7 +91,7 @@ a.navitem {
 	/* Positioning */
 	z-index: 20;
 	position: relative;
-	top: 43vh;
+	top: 44vh;
 	left: 8vw;
 	width: 105px;
 	display: block;
@@ -70,6 +110,21 @@ a.navitem:visited {
 	color: inherit;
 }
 
+/**
+ * Nav item for home must be at the bottom of the HTML document
+ * and thus appears at the bottom of the navigation
+ * The next two selectors flip the order in which DOM elements
+ * are displayed in order to bring "home" back to the top
+ **/
+body {
+	display: flex;
+	flex-flow: column;
+}
+
+#home {
+	order: -1;
+}
+
 .navlabel {
 	/* Style */
 	padding: 4px 0 4px 5px;
@@ -79,11 +134,6 @@ a.navitem:visited {
 
 	/* Animations */
 	transition: border-right 0.1s;
-}
-
-.navlabel:hover, .route:target .navlabel {
-	/* Display blue bar next to nav entry in currently opened page */
-	border-right: 2px solid #30A9F1;
 }
 
 .background {
@@ -101,10 +151,6 @@ a.navitem:visited {
 	background-size: cover;
 
 	transition: opacity 0.2s linear;
-}
-
-.route:target .background {
-	opacity: 1;
 }
 
 .raster, .raster:after {
