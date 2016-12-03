@@ -88,6 +88,8 @@
 	top: 20vh;
 	left: calc(8vw + 105px + 8vw);
 	right: calc(8vw + 105px);
+	max-height: 60vh;
+	overflow-y: scroll;
 
 	padding-bottom: 10px;
 }
