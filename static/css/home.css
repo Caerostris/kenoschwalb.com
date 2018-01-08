@@ -1,0 +1,13 @@
+.name {
+	font-size: 90px;
+	text-transform: uppercase;
+
+	position: absolute;
+	top: 40vh;
+	left: 6vw;
+	margin: 0 0 10px 0;
+}
+
+.name a {
+	text-decoration: none;
+}

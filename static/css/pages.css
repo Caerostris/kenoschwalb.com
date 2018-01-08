@@ -1,8 +1,67 @@
-.route {
-	/* Position navigation items so they appear as if they were defined */
-	/* In the same DOM node */
-	width: 0;
-	height: calc(1em + 15px);
+.page {
+	/* Positioning */
+	position: absolute;
+	height: 500px;
+	max-width: 700px;
+	min-width: 600px;
+	left: 6vw;
+	top: 0;
+	padding-top: calc((100vh - 500px) / 2);
+	margin-left: 400px;
+	padding-right: 6vw;
+	z-index: 10;
+
+	/* Style */
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+
+.page .rows {
+	display: flex;
+	flex-direction: row;
+}
+
+.page .vcenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+a.navitem {
+	/* Positioning */
+	z-index: 20;
+	position: relative;
+	top: calc(40vh + 85px);
+	left: 6vw;
+
+	/* Style */
+	font-size: 30px;
+	padding-bottom: 2px;
+	text-decoration: none;
+}
+
+a.navitem:not(:last-child) {
+	margin-right: 0.2em;
+}
+
+.navitem {
+	/* Animations */
+	transition: border-bottom 0.1s;
+}
+
+/**
+ * Nav item for home must be at the bottom of the HTML document
+ * and thus appears at the bottom of the navigation
+ * The next two selectors flip the order in which DOM elements
+ * are displayed in order to bring "home" back to the front
+ **/
+body {
+	display: flex;
+	flex-flow: row;
+}
+
+#home {
+	order: -1;
 }
 
 /* PAGE ROUTING CODE START */
@@ -26,14 +85,14 @@
 	z-index: 15;
 }
 
-#home .navlabel, .route:target .navlabel {
-	/* Display blue bar next to nav entry in currently opened page */
-	border-right: 2px solid #30A9F1;
+.route:target .navitem {
+	/* Underline currently opened page's nav entry */
+	border-bottom: 1.5px solid #111;
 }
 
-.navlabel:hover {
-	/* Display blue bar next to nav entry on hover */
-	border-right: 2px solid #30A9F1 !important;
+.navitem:hover {
+	/* Underline next to nav entries on hover */
+	border-bottom: 1.5px solid #111;
 }
 
 .route:target ~ #home > div {
@@ -46,130 +105,4 @@
 	z-index: 0;
 }
 
-.route:target ~ #home .navlabel {
-	/* Do not mark home as active in navigation if another page is open */
-	border-right-width: 0;
-}
-
 /* PAGE ROUTING CODE END */
-
-.page {
-	/* Positioning */
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 10;
-
-	/* Style */
-	opacity: 0;
-	transition: opacity 0.2s linear;
-}
-
-.widget {
-	display: inline-block;
-
-	border-top: 3px solid #30A9F1;
-	background-color: rgba(0, 0, 0, 0.6);
-	padding: 5px 10px 5px 10px;
-
-	font-family: sans-serif;
-}
-
-.widget.hi {
-	position: absolute;
-	top: 20vh;
-	right: 10vw;
-}
-
-.widget.content {
-	position: absolute;
-	top: 20vh;
-	left: calc(8vw + 105px + 8vw);
-	right: calc(8vw + 105px);
-	max-height: 60vh;
-	overflow-y: scroll;
-
-	padding-bottom: 10px;
-}
-
-a.navitem {
-	/* Positioning */
-	z-index: 20;
-	position: relative;
-	top: 44vh;
-	left: 8vw;
-	width: 105px;
-	display: block;
-
-	/* Style */
-	background-color: rgba(0, 0, 0, 0.6);
-	text-decoration: none;
-	text-transform: uppercase;
-	font-family: BebasNeueRegular, impact;
-	font-weight: bold;
-	font-size: 20px;
-	color: white;
-}
-
-a.navitem:visited {
-	color: inherit;
-}
-
-/**
- * Nav item for home must be at the bottom of the HTML document
- * and thus appears at the bottom of the navigation
- * The next two selectors flip the order in which DOM elements
- * are displayed in order to bring "home" back to the top
- **/
-body {
-	display: flex;
-	flex-flow: column;
-}
-
-#home {
-	order: -1;
-}
-
-.navlabel {
-	/* Style */
-	padding: 4px 0 4px 5px;
-
-	/* Fix white flickering caused by color being transitioned */
-	border-right: 0 solid #30A9F1;
-
-	/* Animations */
-	transition: border-right 0.1s;
-}
-
-.background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-	opacity: 0;
-
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	background-size: cover;
-
-	transition: opacity 0.2s linear;
-}
-
-.raster, .raster:after {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 5;
-}
-
-.raster:after {
-	content: '';
-	background: url('../images/raster.png') repeat top left;
-}

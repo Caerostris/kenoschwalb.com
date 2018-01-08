@@ -1,32 +1,19 @@
-@font-face {
-	font-family: 'BebasNeueRegular';
-	src: url('../font/BebasNeue-webfont.eot'),
-		url('../font/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../font/BebasNeue-webfont.woff') format('woff'),
-		url('../font/BebasNeue-webfont.ttf') format('truetype'),
-		url('../font/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 body {
+	font-family: 'Tall Dark And Handsome';
+	font-size: 23px;
+	line-height: 1.01;
+	color: #111;
+
 	margin: 0;
 	width: 0;
-	color: white;
 }
 
-h1, h2 {
-	font-family: BebasNeueRegular, impact;
-	text-shadow: 0 -3px 3px #333;
-	text-transform: uppercase;
+a {
+	color: inherit;
+}
+
+ul {
+	list-style-type: none;
 	margin: 0;
-}
-
-h1 {
-	font-size: 45px;
-}
-
-h2 {
-	font-size: 35px;
-	margin-bottom: 5px;
+	padding: 0;
 }
