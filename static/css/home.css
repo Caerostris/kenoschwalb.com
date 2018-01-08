@@ -11,3 +11,18 @@
 .name a {
 	text-decoration: none;
 }
+
+#home .logo {
+	width: 500px;
+	height: 500px;
+	background-color: #111;
+	text-align: center;
+	overflow: hidden;
+}
+
+#home .logo span {
+	position: relative;
+	top: -112px;
+	font-size: 717px;
+	color: white;
+}

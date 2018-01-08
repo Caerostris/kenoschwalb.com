@@ -2,8 +2,7 @@
 	/* Positioning */
 	position: absolute;
 	height: 500px;
-	max-width: 700px;
-	min-width: 600px;
+	width: 500px;
 	left: 6vw;
 	top: 0;
 	padding-top: calc((100vh - 500px) / 2);
@@ -49,19 +48,9 @@ a.navitem:not(:last-child) {
 	transition: border-bottom 0.1s;
 }
 
-/**
- * Nav item for home must be at the bottom of the HTML document
- * and thus appears at the bottom of the navigation
- * The next two selectors flip the order in which DOM elements
- * are displayed in order to bring "home" back to the front
- **/
 body {
 	display: flex;
 	flex-flow: row;
-}
-
-#home {
-	order: -1;
 }
 
 /* PAGE ROUTING CODE START */
