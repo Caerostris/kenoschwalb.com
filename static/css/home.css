@@ -4,7 +4,7 @@
 
 	position: absolute;
 	top: 40vh;
-	left: 6vw;
+	padding-left: calc(50vw - 425px);
 	margin: 0 0 10px 0;
 }
 
@@ -15,7 +15,9 @@
 #home .logo {
 	width: 500px;
 	height: 500px;
-	background-color: #111;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	text-align: center;
 	overflow: hidden;
 }

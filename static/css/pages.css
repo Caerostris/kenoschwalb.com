@@ -1,9 +1,14 @@
+.route:first-child {
+	padding-left: calc(50vw - 425px);
+}
+
 .page {
 	/* Positioning */
 	position: absolute;
 	height: 500px;
 	width: 500px;
-	left: 6vw;
+	left: 0;
+	padding-left: calc(50vw - 425px);
 	top: 0;
 	padding-top: calc((100vh - 500px) / 2);
 	margin-left: 400px;
@@ -20,6 +25,11 @@
 	flex-direction: row;
 }
 
+.page .cols {
+	display: flex;
+	flex-direction: column;
+}
+
 .page .vcenter {
 	display: flex;
 	flex-direction: column;
@@ -31,7 +41,6 @@ a.navitem {
 	z-index: 20;
 	position: relative;
 	top: calc(40vh + 85px);
-	left: 6vw;
 
 	/* Style */
 	font-size: 30px;
