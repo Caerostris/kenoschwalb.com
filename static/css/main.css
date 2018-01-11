@@ -1,3 +1,13 @@
+@font-face {
+	font-family: 'Nadeem Stripped';
+	src: url('../fonts/NadeemStripped.woff');
+}
+
+@font-face {
+	font-family: 'Tall Dark And Handsome';
+	src: url('../fonts/TallDarkAndHandsome.woff');
+}
+
 body {
 	font-family: 'Tall Dark And Handsome';
 	font-size: 23px;
