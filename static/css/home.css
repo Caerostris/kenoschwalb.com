@@ -1,17 +1,3 @@
-.name {
-	font-size: 90px;
-	text-transform: uppercase;
-
-	position: absolute;
-	top: 40vh;
-	padding-left: calc(50vw - 425px);
-	margin: 0 0 10px 0;
-}
-
-.name a {
-	text-decoration: none;
-}
-
 #home .logo {
 	width: 500px;
 	height: 500px;

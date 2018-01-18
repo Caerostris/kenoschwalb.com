@@ -11,11 +11,14 @@
 body {
 	font-family: 'Tall Dark And Handsome';
 	font-size: 23px;
+	letter-spacing: 1px;
 	line-height: 1.01;
 	color: #111;
 
+	display: flex;
+	flex-flow: row;
 	margin: 0;
-	width: 0;
+	padding-left: calc(50% - 425px);
 }
 
 a {
@@ -33,6 +36,112 @@ span.underline {
 	border-bottom: 1.5px solid #111;
 }
 
-b {
-	letter-spacing: 1px;
+.name {
+	font-size: 90px;
+	text-transform: uppercase;
+
+	position: absolute;
+	top: 40vh;
 }
+
+.name a {
+	text-decoration: none;
+}
+
+.page {
+	/* Positioning */
+	position: absolute;
+	height: 500px;
+	width: 500px;
+	left: 0;
+	padding-left: calc(50% - 425px);
+	top: 0;
+	padding-top: calc((100vh - 500px) / 2);
+	margin-left: 400px;
+	padding-right: 6vw;
+	z-index: 10;
+
+	/* Style */
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+
+.page .rows {
+	display: flex;
+	flex-direction: row;
+}
+
+.page .cols {
+	display: flex;
+	flex-direction: column;
+}
+
+.page .vcenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+a.navitem {
+	/* Positioning */
+	z-index: 20;
+	position: relative;
+	top: calc(40vh + 85px);
+
+	/* Style */
+	font-size: 30px;
+	padding-bottom: 2px;
+	text-decoration: none;
+}
+
+a.navitem:not(:last-child) {
+	margin-right: 0.2em;
+}
+
+.navitem {
+	/* Animations */
+	transition: border-bottom 0.1s;
+}
+
+/* PAGE ROUTING CODE START */
+
+/**
+ * Skip this bit if you don't want a headache.
+ * This code uses the #hashlocation part of the URL and the CSS
+ * :target selector to hide/show pages.
+ * The #home page is activated by default, and will be deactived
+ * if any other page is activated.
+ **/
+#home > div, .route:target > div {
+	/* Display content of opened page, */
+	/* or home page if no page is selected */
+	opacity: 1;
+}
+
+#home > .page, .route:target > .page {
+	/* Ensure currently opened page is at z-top so that */
+	/* text can be selected */
+	z-index: 15;
+}
+
+.route:target .navitem {
+	/* Underline currently opened page's nav entry */
+	border-bottom: 1.5px solid #111;
+}
+
+.navitem:hover {
+	/* Underline next to nav entries on hover */
+	border-bottom: 1.5px solid #111;
+}
+
+.route:target ~ #home > div {
+	/* Hide home page if any other page is open */
+	opacity: 0 !important;
+}
+
+.route:target ~ #home > .page {
+	/* Ensure home page is not at z-top if any other page is open */
+	z-index: 0;
+}
+
+/* PAGE ROUTING CODE END */
