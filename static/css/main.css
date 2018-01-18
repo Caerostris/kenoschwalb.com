@@ -125,6 +125,14 @@ a.navitem:not(:last-child) {
 	z-index: 15;
 }
 
+@-moz-document url-prefix() {
+	a.navitem, span.underline {
+		/* firefox renders the font with a padding at the bottom */
+		display: inline-block;
+		height: 0.8em;
+	}
+}
+
 .route:target .navitem {
 	/* Underline currently opened page's nav entry */
 	border-bottom: 1.5px solid #111;
