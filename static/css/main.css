@@ -42,6 +42,7 @@ span.underline {
 
 	position: absolute;
 	top: 40vh;
+	z-index: 20;
 }
 
 .name a {
