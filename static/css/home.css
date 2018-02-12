@@ -6,6 +6,7 @@
 	background-size: cover;
 	text-align: center;
 	overflow: hidden;
+	margin-top: -20px;
 }
 
 #home .logo span {
