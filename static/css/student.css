@@ -20,10 +20,6 @@
 	text-align: center;
 }
 
-#student .cols .text:first-child {
-	padding-top: 50px;
-}
-
 #student .cols .text:last-child {
 	padding-bottom: 50px;
 }

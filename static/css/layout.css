@@ -1,0 +1,50 @@
+@media (min-width: 600px) {
+	body {
+		padding-left: calc(50% - 450px);
+	}
+
+	.name {
+		top: 40vh;
+	}
+
+	.page {
+		padding-left: calc(50% - 450px);
+		padding-right: calc(50% - 450px);
+		padding-top: calc((100vh - 500px) / 2);
+		margin-left: 400px;
+	}
+
+	a.navitem {
+		top: calc(40vh + 85px);
+	}
+}
+
+@media (max-width: 599px) {
+	body {
+		padding-left: calc(50% - 150px);
+	}
+
+	.name {
+		top: 1vh;
+	}
+
+	.page {
+		padding-left: calc(50% - 150px);
+		padding-right: calc(50% - 150px);
+		padding-top: calc(1vh + 85px + 50px);
+		width: 300px;
+		height: 300px;
+	}
+
+	.page svg {
+		display: none;
+	}
+
+	a.navitem {
+		top: calc(1vh + 85px);
+	}
+
+	.route:first-child {
+		margin-left: 30px;
+	}
+}

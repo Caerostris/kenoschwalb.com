@@ -18,7 +18,6 @@ body {
 	display: flex;
 	flex-flow: row;
 	margin: 0;
-	padding-left: calc(50% - 425px);
 }
 
 a {
@@ -37,12 +36,11 @@ span.underline {
 }
 
 .name {
+	position: absolute;
+	z-index: 20;
+
 	font-size: 90px;
 	text-transform: uppercase;
-
-	position: absolute;
-	top: 40vh;
-	z-index: 20;
 }
 
 .name a {
@@ -50,19 +48,13 @@ span.underline {
 }
 
 .page {
-	/* Positioning */
 	position: absolute;
 	height: 500px;
 	width: 500px;
 	left: 0;
-	padding-left: calc(50% - 425px);
 	top: 0;
-	padding-top: calc((100vh - 500px) / 2);
-	margin-left: 400px;
-	padding-right: 6vw;
 	z-index: 10;
 
-	/* Style */
 	opacity: 0;
 	transition: opacity 0.2s linear;
 }
@@ -77,6 +69,10 @@ span.underline {
 	flex-direction: column;
 }
 
+.page .flexpadding {
+	flex-grow: 1;
+}
+
 .page .vcenter {
 	display: flex;
 	flex-direction: column;
@@ -84,12 +80,9 @@ span.underline {
 }
 
 a.navitem {
-	/* Positioning */
 	z-index: 20;
 	position: relative;
-	top: calc(40vh + 85px);
 
-	/* Style */
 	font-size: 30px;
 	padding-bottom: 2px;
 	text-decoration: none;
