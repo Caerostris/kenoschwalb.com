@@ -38,6 +38,7 @@ span.underline {
 .name {
 	position: absolute;
 	z-index: 20;
+	width: 301px;
 
 	font-size: 90px;
 	text-transform: uppercase;
@@ -62,6 +63,7 @@ span.underline {
 .page .rows {
 	display: flex;
 	flex-direction: row;
+	height: 100%;
 }
 
 .page .cols {

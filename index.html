@@ -19,7 +19,15 @@
 			</div>
 			<div class='page'>
 				<div class='rows'>
-					<svg width='85' height='500'>
+					<svg class='portrait' width='60' height='300'>
+						<defs>
+							<pattern id="img1" patternUnits="objectBoundingBox" width="1" height="1">
+								<image xlink:href="static/images/brace.jpg" x="-600" y="0" width="1142" height="1491" />
+							</pattern>
+						</defs>
+						<text x='-12' y='210' font-size='170px' font-family='Nadeem Stripped' fill='url(#img1)'>{</text>
+					</svg>
+					<svg class='landscape' width='85' height='500'>
 						<defs>
 							<pattern id="img1" patternUnits="objectBoundingBox" width="1" height="1">
 								<image xlink:href="static/images/brace.jpg" x="-600" y="0" width="1142" height="1491" />
@@ -57,7 +65,10 @@
 						</div>
 						<div class='flexpadding'></div>
 					</div>
-					<svg width='85' height='500'>
+					<svg class='portrait' width='60' height='300'>
+						<text x="-39" y="210" style="font-size: 170px; font-family: 'Nadeem Stripped';" fill="url(#img1)">}</text>
+					</svg>
+					<svg class='landscape' width='85' height='500'>
 						<text x="-65" y="350" style="font-size: 285px; font-family: 'Nadeem Stripped';" fill="url(#img1)">}</text>
 					</svg>
 				</div>
@@ -89,12 +100,14 @@
 									<li>Assistant youth representative at WSV (2011)</li>
 								</ul>
 							</div>
-							<br />
-							<div>
-								I started fencing when I was 8 and won't quit anytime soon.<br />
-								What I love most about the sport is it's focus on fairness<br />
-								and it's tight-knit community.<br />
-								Some last cool punch line to round things up.
+							<div class='landscape'>
+								<br />
+								<div>
+									I started fencing when I was 8 and won't quit anytime soon.<br />
+									What I love most about the sport is it's focus on fairness<br />
+									and it's tight-knit community.<br />
+									Some last cool punch line to round things up.
+								</div>
 							</div>
 						</div>
 					</div>

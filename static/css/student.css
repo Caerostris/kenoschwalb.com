@@ -16,7 +16,7 @@
 }
 
 #student .cols .text {
-	height: 199.5px;
+	height: calc(50% - 1px);
 	text-align: center;
 }
 

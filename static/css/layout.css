@@ -20,6 +20,14 @@
 		padding-bottom: 0;
 		margin-top: 270px;
 	}
+
+	.portrait {
+		display: none;
+	}
+
+	#home .logo {
+		margin-top: -20px;
+	}
 }
 
 @media (orientation: portrait) {
@@ -27,27 +35,29 @@
 		padding-left: calc(50% - 150px);
 	}
 
-	.name {
-		top: 1vh;
-	}
-
 	.page {
 		padding-left: calc(50% - 150px);
 		padding-right: calc(50% - 150px);
-		padding-top: calc(1vh + 85px + 50px);
+		padding-top: calc(50vh - 110px);
 		width: 300px;
 		height: 300px;
+
+		font-size: 20px;
 	}
 
-	.page svg {
-		display: none;
+	.name {
+		padding-top: calc(50vh - 235px);
 	}
 
-	.navitem a {
-		top: calc(1vh + 80px);
+	.navitem {
+		padding-top: calc(50vh - 155px);
 	}
 
 	.route:first-child {
 		margin-left: 30px;
+	}
+
+	.landscape {
+		display: none;
 	}
 }
