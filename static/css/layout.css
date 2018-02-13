@@ -1,10 +1,11 @@
-@media (min-width: 600px) {
+@media (orientation: landscape) {
 	body {
 		padding-left: calc(50% - 450px);
 	}
 
 	.name {
-		top: 40vh;
+		padding-top: calc((100vh - 500px) / 2);
+		margin-top: 190px;
 	}
 
 	.page {
@@ -14,12 +15,14 @@
 		margin-left: 400px;
 	}
 
-	a.navitem {
-		top: calc(40vh + 85px);
+	.navitem {
+		padding-top: calc((100vh - 500px) / 2);
+		padding-bottom: 0;
+		margin-top: 270px;
 	}
 }
 
-@media (max-width: 599px) {
+@media (orientation: portrait) {
 	body {
 		padding-left: calc(50% - 150px);
 	}
@@ -40,8 +43,8 @@
 		display: none;
 	}
 
-	a.navitem {
-		top: calc(1vh + 85px);
+	.navitem a {
+		top: calc(1vh + 80px);
 	}
 
 	.route:first-child {

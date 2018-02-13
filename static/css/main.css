@@ -79,22 +79,17 @@ span.underline {
 	justify-content: center;
 }
 
-a.navitem {
-	z-index: 20;
+.navitem a {
 	position: relative;
-
+	z-index: 30;
 	font-size: 30px;
 	padding-bottom: 2px;
 	text-decoration: none;
-}
-
-a.navitem:not(:last-child) {
-	margin-right: 0.2em;
-}
-
-.navitem {
-	/* Animations */
 	transition: border-bottom 0.1s;
+}
+
+.navitem:not(:last-child) {
+	margin-right: 0.2em;
 }
 
 /* PAGE ROUTING CODE START */
@@ -119,19 +114,19 @@ a.navitem:not(:last-child) {
 }
 
 @-moz-document url-prefix() {
-	a.navitem, span.underline {
+	.navitem a, span.underline {
 		/* firefox renders the font with a padding at the bottom */
 		display: inline-block;
 		height: 0.8em;
 	}
 }
 
-.route:target .navitem {
+.route:target .navitem a {
 	/* Underline currently opened page's nav entry */
 	border-bottom: 1.5px solid #111;
 }
 
-.navitem:hover {
+.navitem a:hover {
 	/* Underline next to nav entries on hover */
 	border-bottom: 1.5px solid #111;
 }
