@@ -1,6 +1,6 @@
 @font-face {
-	font-family: 'Nadeem Stripped';
-	src: url('../fonts/NadeemStripped.woff');
+	font-family: 'MarvelSlim';
+	src: url('../fonts/MarvelSlim.woff');
 }
 
 @font-face {
@@ -38,7 +38,7 @@ span.underline {
 .name {
 	position: absolute;
 	z-index: 20;
-	width: 301px;
+	width: 303px;
 
 	font-size: 90px;
 	text-transform: uppercase;
