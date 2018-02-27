@@ -1,5 +1,8 @@
-script: echo "Deployment"
+language: node_js
+script: npm run-script build
+before_deploy: cd build
 deploy:
+  skip_cleanup: true
   provider: s3
   access_key_id: AKIAIE4TRMN5HHLXGYAA
   bucket: kenoschwalb.com
