@@ -1,0 +1,21 @@
+{
+  "name": "kenoschwalb.com",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caerostris/kenoschwalb.com.git"
+  },
+  "author": "Keno Schwalb",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/Caerostris/kenoschwalb.com/issues"
+  },
+  "homepage": "https://github.com/Caerostris/kenoschwalb.com#readme",
+  "devDependencies": {
+    "csso-cli": "^1.1.0"
+  }
+}
