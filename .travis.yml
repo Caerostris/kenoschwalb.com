@@ -1,10 +1,8 @@
 language: node_js
 node_js:
   - "lts/*"
-script: npm run-script build
-before_deploy: cd build
+script: echo "Deployment"
 deploy:
-  skip_cleanup: true
   provider: s3
   access_key_id: AKIAIE4TRMN5HHLXGYAA
   bucket: kenoschwalb.com
