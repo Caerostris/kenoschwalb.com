@@ -2,7 +2,7 @@
 
 rm -rf build
 mkdir build
-cp index.html favicon.ico build/
+cp index.html build/
 cp -R static build && rm build/static/css/*.css
 cat \
 	static/css/main.css \
