@@ -31,7 +31,7 @@ $('.tile.image').each(function() {
 		}
 
 		const fileId = selectorMatches[1];
-		const outputFile = path.join(outputFolder, fileId);
+		const outputFile = path.join(outputFolder, `${fileId}.jpg`);
 		const outStream = fs.createWriteStream(outputFile);
 
 		// rewrite to cached file in HTML tree
