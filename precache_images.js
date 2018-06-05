@@ -39,10 +39,8 @@ $('.tile.image').each(function() {
 
 		// cache file at given url
 		https.get(url, res => {
-			console.log(res.statusCode);
 			res.pipe(outStream);
 			outStream.on('finish', () => outStream.close(() => {
-				console.log(`Downloaded ${fileId}`);
 			}));
 		}).on('error', err => {
 			console.error('Download error:');
