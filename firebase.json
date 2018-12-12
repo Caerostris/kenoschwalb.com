@@ -12,6 +12,24 @@
         "key": "Cache-Control",
         "value": "max-age=604800"
       } ]
+    }, {
+      "source": "**",
+      "headers": [ {
+        "key": "Content-Security-Policy",
+        "value": "default-src 'none'; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; media-src 'self'"
+      }, {
+        "key": "X-Frame-Options",
+        "value": "deny"
+      }, {
+        "key": "X-XSS-Protection",
+        "value": "1"
+      }, {
+        "key": "Referrer-Policy",
+        "value": "no-referrer"
+      }, {
+        "key": "Feature-Policy",
+        "value": "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; speaker 'none'; sync-xhr 'none'; usb 'none'; vr 'none'"
+      } ]
     } ]
   }
 }
