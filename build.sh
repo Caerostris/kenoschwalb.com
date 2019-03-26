@@ -7,6 +7,7 @@ mkdir build
 
 echo "Copying development files"
 cp index.html build/
+cp keybase.txt build/
 cp -R static build && rm build/static/css/*.css
 
 echo "Minifying CSS"
