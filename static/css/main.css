@@ -91,7 +91,7 @@ span.underline {
 }
 
 .navitem:not(:last-child) {
-	margin-right: 0.2em;
+	margin-right: 0.4em;
 }
 
 /* PAGE ROUTING CODE START */

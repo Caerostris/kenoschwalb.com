@@ -1,8 +1,8 @@
-#student .bracket {
+#researcher .bracket {
 	position: relative;
 }
 
-#student .bracket span {
+#researcher .bracket span {
 	position: absolute;
 	top: 0;
 
@@ -11,21 +11,25 @@
 	background-color: white;
 }
 
-#student .cols {
+#researcher .cols {
 	flex-grow: 1;
 }
 
-#student .cols .text {
-	height: calc(50% - 1px);
+#researcher .cols .text {
+	height: calc(45% - 1px);
 	text-align: center;
 }
 
-#student .cols .text:last-child {
+#researcher .cols .text:last-child {
 	padding-bottom: 50px;
 }
 
-#student .bar {
+#researcher .bar {
 	width: 100%;
 	height: 1px;
 	background-color: #111;
+}
+
+#researcher li {
+	padding-top: 0.1em;
 }

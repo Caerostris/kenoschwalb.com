@@ -17,7 +17,7 @@ cat \
 	static/css/home.css \
 	static/css/fencer.css \
 	static/css/photographer.css \
-	static/css/student.css \
+	static/css/researcher.css \
 	| node_modules/csso-cli/bin/csso > build/static/css/main.min.css
 perl -i -0pe "s/(\s*<link rel='stylesheet' [^>]+>\n)+/\n\t\t<link rel='stylesheet' type='text\/css' href='static\/css\/main.min.css' \/>\n/" build/index.html
 
