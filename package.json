@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal portfolio website",
   "scripts": {
-    "build": "./build.sh"
+    "build": "./src/build.sh"
   },
   "repository": {
     "type": "git",
