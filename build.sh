@@ -1,27 +1,23 @@
 #!/bin/sh
 set -e
 
-echo "Clearing build directory"
-rm -rf build
-mkdir build
+mkdir -p .cache/images
+
+echo "Cleaning build directory"
+rm -rf build/*
+mkdir -p build
 
 echo "Copying development files"
 cp index.html build/
 cp keybase.txt build/
-cp -R static build && rm build/static/css/*.css
-
-echo "Minifying CSS"
-cat \
-	static/css/main.css \
-	static/css/layout.css \
-	static/css/home.css \
-	static/css/fencer.css \
-	static/css/photographer.css \
-	static/css/researcher.css \
-	| node_modules/csso-cli/bin/csso > build/static/css/main.min.css
-perl -i -0pe "s/(\s*<link rel='stylesheet' [^>]+>\n)+/\n\t\t<link rel='stylesheet' type='text\/css' href='static\/css\/main.min.css' \/>\n/" build/index.html
+cp -R static build
+rm -r build/static/css
+mkdir build/static/css
 
 echo "Precaching images"
-mkdir build/static/images/thumbnails
-cd build
-node ../precache_images.js index.html static/images/thumbnails "https://www.instagram.com/p/([^/]+)/media"
+./precache_images.sh index.html .cache/images .cache/images.css
+cp .cache/images/* build/static/images/
+
+echo "Minifying CSS"
+node_modules/clean-css-cli/bin/cleancss --source-map -o build/static/css/main.min.css .cache/images.css static/css/*.css
+perl -i -0pe "s/(\s*<link rel='stylesheet' [^>]+>\n)+/\n\t\t<link rel='stylesheet' type='text\/css' href='static\/css\/main.min.css' \/>\n/" build/index.html

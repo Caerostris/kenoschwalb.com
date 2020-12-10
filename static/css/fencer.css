@@ -1,10 +1,5 @@
-#fencer .container .center {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-#fencer .banner {
+#fencing-banner-image {
+	background-image: url(/static/images/fencing_banner.jpg);
 	height: 100%;
 	padding-left: 28%;
 	margin-right: 1vw;
@@ -12,3 +7,10 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
+/*
+#fencer .container .center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+} */

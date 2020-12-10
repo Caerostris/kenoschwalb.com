@@ -16,11 +16,7 @@
   },
   "homepage": "https://github.com/Caerostris/kenoschwalb.com#readme",
   "devDependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "csso-cli": "^3.0.0",
-    "follow-redirects": "^1.9.0"
+    "clean-css-cli": "^4.3.0"
   },
-  "dependencies": {
-    "firebase-tools": "^8.2.0"
-  }
+  "dependencies": {}
 }

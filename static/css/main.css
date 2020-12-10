@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'MarvelSlim';
-	src: url('../fonts/MarvelSlim.woff');
+	src: url('/static/fonts/MarvelSlim.woff');
 }
 
 @font-face {
 	font-family: 'Tall Dark And Handsome';
-	src: url('../fonts/TallDarkAndHandsome.woff');
+	src: url('/static/fonts/TallDarkAndHandsome.woff');
 }
 
 body {
