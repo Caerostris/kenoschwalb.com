@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/caerostris
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://kenoschwalb.com
+  * I am caerostris (https://keybase.io/caerostris) on keybase.
+  * I have a public key ASCFM0ot7mHnhQyDcuL_NBjSSS_0zzl_hnHCWS-aWXntOAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012085334a2dee61e7850c8372e2ff3418d2492ff4cf397f8671c2592f9a5979ed380a",
+      "host": "keybase.io",
+      "kid": "012085334a2dee61e7850c8372e2ff3418d2492ff4cf397f8671c2592f9a5979ed380a",
+      "uid": "6854ea6823b17445f1b31b6089af2719",
+      "username": "caerostris"
+    },
+    "merkle_root": {
+      "ctime": 1553624904,
+      "hash": "1b49b8b9136b5488d704930125736dd4423a27fc7266a876d9a9f1736e37a494a323a15dd296572c185bb3cf3b6f3db7d205c772a667f29112306a9c687f6feb",
+      "hash_meta": "1ee61901d741fb34e9d0aa0e05336806839c7800f348cea1fe6db223818a9888",
+      "seqno": 5027343
+    },
+    "service": {
+      "entropy": "klClAaw9RQmCD6iQOJOrJ7y+",
+      "hostname": "kenoschwalb.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1553624910,
+  "expire_in": 504576000,
+  "prev": "e261114e488402e2be98961bd1fb0c09f4bdca55e867b432227f8c2eb9fcdb76",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghTNKLe5h54UMg3Li/zQY0kkv9M85f4Zxwlkvmll57TgKp3BheWxvYWTESpcCCMQg4mERTkiEAuK+mJYb0fsMCfS9ylXoZ7QyIn+MLrn823bEIFLumPp0ifyl007PdY1Q81X13BBkQLHPTL3dX8f6RROlAgHCo3NpZ8RAnIKrRwUE7msJPmNMyUQZm2RyYk5ohWyjzBAEdvYdBnN4V9A8hBfXK5MKC1U1odljV/5vaYybzyDerCZvHlHsCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGDAm4pGvS1tLiVDvrw5Qld+66VK1kplT+kGUA9VrDdwo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/caerostris
+
+==================================================================
