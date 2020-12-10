@@ -3,21 +3,31 @@ set -e
 
 mkdir -p .cache/images
 
+if [ ! -d '.build' ]; then
+	git clone -b gh-pages git@github.com:caerostris/kenoschwalb.com.git .build
+fi
+
 echo "Cleaning build directory"
-rm -rf build/*
-mkdir -p build
+cd .build
+git rm -rf .
+cd ..
 
 echo "Copying development files"
-cp index.html build/
-cp keybase.txt build/
-cp -R static build
-rm -r build/static/css
-mkdir build/static/css
+cp index.html .build/
+cp keybase.txt .build/
+mkdir .build/static
+cp -R static/images .build/static
+cp -R static/fonts .build/static
+mkdir .build/static/css
+touch .build/.nojekyll
 
 echo "Precaching images"
 ./precache_images.sh index.html .cache/images .cache/images.css
-cp .cache/images/* build/static/images/
+cp .cache/images/* .build/static/images/
 
 echo "Minifying CSS"
-node_modules/clean-css-cli/bin/cleancss --source-map -o build/static/css/main.min.css .cache/images.css static/css/*.css
-perl -i -0pe "s/(\s*<link rel='stylesheet' [^>]+>\n)+/\n\t\t<link rel='stylesheet' type='text\/css' href='static\/css\/main.min.css' \/>\n/" build/index.html
+node_modules/clean-css-cli/bin/cleancss --source-map -o .build/static/css/main.min.css .cache/images.css static/css/*.css
+perl -i -0pe "s/(\s*<link rel='stylesheet' [^>]+>\n)+/\n\t\t<link rel='stylesheet' type='text\/css' href='static\/css\/main.min.css' \/>\n/" .build/index.html
+
+cd .build
+git add --all
