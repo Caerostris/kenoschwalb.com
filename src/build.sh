@@ -16,6 +16,7 @@ echo "Cleaning build directory"
 cd "$build_dir"
 git rm -rf .
 cd ..
+rm "$cache_dir/images.css"
 
 echo "Copying development files"
 cp -R "$public_dir"/. "$build_dir/"
