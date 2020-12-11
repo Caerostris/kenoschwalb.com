@@ -32,3 +32,4 @@ perl -i -0pe "s/(\s*<link rel='stylesheet' [^>]+>\n)+/\n\t\t<link rel='styleshee
 
 cd "$build_dir"
 git add --all
+git status
