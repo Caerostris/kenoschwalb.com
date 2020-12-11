@@ -8,14 +8,6 @@
 	overflow: hidden;
 }
 
-/*
-#home .logo span {
-	position: relative;
-	top: -112px;
-	font-size: 717px;
-	color: white;
-}*/
-
-#home-banner-image {
+.home-image {
 	background-image: url(/static/images/home.jpg);
 }
