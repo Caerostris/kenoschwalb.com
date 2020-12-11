@@ -4,7 +4,7 @@
 		<!-- Hand crafted & 100% JS-free <3 -->
 		<!-- https://github.com/caerostris/kenoschwalb.com -->
 		<meta charset='UTF-8' />
-		<meta http-equiv='Content-Security-Policy' content="upgrade-insecure-requests; default-src 'none'; form-action 'none'; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self';" />
+		<meta http-equiv='Content-Security-Policy' content="upgrade-insecure-requests; default-src 'none'; form-action 'none'; img-src 'self'; style-src 'self'; font-src 'self';" />
 		<meta http-equiv='X-XSS-Protection' content='1; mode=block'>
 		<meta http-equiv='X-Content-Type-Options' content='nosniff'>
 		<meta http-equiv='X-Frame-Options' content='DENY'>
@@ -13,9 +13,10 @@
 		<meta name='viewport' content='width=device-width' />
 		<title>Keno Schwalb</title>
 		<link rel='icon' type='image/png' sizes='32x32' href='/static/images/favicon-32x32.png'>
-		<link rel='stylesheet' type='text/css' href='static/css/main.min.css' />
+		<link rel='stylesheet' type='text/css' href='static/css/bundle.css' />
 	</head>
 	<body>
+		<div width=0 height=0 class='home-image prefetch'></div> <!-- hack to prefetch home.jpg -->
 		<div id='researcher' class='route'>
 			<div class='navitem'>
 				<a href='#researcher'>Researcher.</a>
@@ -163,7 +164,7 @@
 		<div id='home' class='route'>
 			<div class='page'>
 				<a href='#researcher'>
-					<div class='logo' id='home-banner-image'></div>
+					<div class='logo home-image'></div>
 				</a>
 			</div>
 		</div>
