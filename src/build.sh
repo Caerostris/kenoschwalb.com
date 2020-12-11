@@ -24,11 +24,11 @@ echo "Precaching images"
 "$root/src/precache_images.sh" "$public_dir/index.html" "$cache_dir/images" "$cache_dir/images.css"
 cp "$cache_dir/images"/* "$build_dir/static/images/"
 
-echo "Minifying CSS"
+echo "Bundling CSS"
 rm -r "$build_dir/static/css"
 mkdir "$build_dir/static/css"
-node_modules/clean-css-cli/bin/cleancss --source-map -o "$build_dir/static/css/main.min.css" "$cache_dir/images.css" "$public_dir/static/css"/*.css
-perl -i -0pe "s/(\s*<link rel='stylesheet' [^>]+>\n)+/\n\t\t<link rel='stylesheet' type='text\/css' href='static\/css\/main.min.css' \/>\n/" "$build_dir/index.html"
+cat "$public_dir/static/css"/*.css "$cache_dir/images.css" > "$build_dir/static/css/bundle.css"
+perl -i -0pe "s/(\s*<link rel='stylesheet' [^>]+>\n)+/\n\t\t<link rel='stylesheet' type='text\/css' href='static\/css\/bundle.css' \/>\n/" "$build_dir/index.html"
 
 cd "$build_dir"
 git add --all
