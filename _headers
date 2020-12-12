@@ -1,0 +1,8 @@
+/*
+  Content-Security-Policy: sandbox allow-popups allow-same-origin; upgrade-insecure-requests; default-src 'none'; form-action 'none'; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self';
+  Permissions-Policy: accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), speaker=(), sync-xhr=(), usb=(), vr=()
+  Referrer-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
