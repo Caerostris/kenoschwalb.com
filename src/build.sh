@@ -9,7 +9,7 @@ public_dir="$root/public"
 mkdir -p "$cache_dir/images"
 
 if [ ! -d "$build_dir" ]; then
-	git clone -b gh-pages git@github.com:caerostris/kenoschwalb.com.git "$build_dir"
+	git clone -b netlify git@github.com:caerostris/kenoschwalb.com.git "$build_dir"
 fi
 
 echo "Cleaning build directory"

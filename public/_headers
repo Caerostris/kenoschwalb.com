@@ -1,0 +1,23 @@
+/*
+  Content-Security-Policy: sandbox allow-popups allow-same-origin; frame-ancestors: 'none'; upgrade-insecure-requests; default-src 'none'; form-action 'none'; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' base-uri 'self';
+  Permissions-Policy: accelerometer=()
+  Permissions-Policy: ambient-light-sensor=()
+  Permissions-Policy: autoplay=()
+  Permissions-Policy: camera=()
+  Permissions-Policy: encrypted-media=()
+  Permissions-Policy: fullscreen=()
+  Permissions-Policy: geolocation=()
+  Permissions-Policy: gyroscope=()
+  Permissions-Policy: magnetometer=()
+  Permissions-Policy: microphone=()
+  Permissions-Policy: midi=()
+  Permissions-Policy: payment=()
+  Permissions-Policy: speaker=()
+  Permissions-Policy: sync-xhr=()
+  Permissions-Policy: usb=()
+  Permissions-Policy: vr=()
+  Referrer-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
